@@ -1,0 +1,14 @@
+.select-section{
+    background-color: aqua;
+    padding: 10px 0;
+}
+
+
+.card-container .card .card-img-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    padding-bottom: 0;
+    font-size: 3rem;
+  }
