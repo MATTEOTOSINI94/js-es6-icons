@@ -142,6 +142,8 @@ selectType.addEventListener("change", function(){
 	  return true
 	})
  cardPrint(typeSelection)
+
+
  console.log(typeSelection)
  console.log(this.value)
 })
