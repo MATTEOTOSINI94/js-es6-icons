@@ -111,26 +111,51 @@ function cardPrint(cards) {
 	
 cardContainer.innerHTML = ""
 
-for (let x = 0; x < cards.length; x++) {
-	const icona = cards[x];
-
-
-	const {family,prefix,name,type} = icona
+cards.forEach(function (singolaCard,i) {
+	// metodo foreach
+	const {family,prefix,name,type} = singolaCard
 	const colore = coloreIcone[type]
-
-
-cardContainer.innerHTML += `
-<div class="col">
-<div class="card h-100 shadow-sm">
-  <div class="card-img-top">
-  <i class="${family} ${prefix + name }" style="color:${colore}"></i>
-  </div>
-  <div class="card-body">
-	<div class="card-title text-center">${name}</div>
-  </div>
-</div>
-</div>`;	
+	
+	
+	cardContainer.innerHTML += `
+	<div class="col">
+	<div class="card h-100 shadow-sm">
+	  <div class="card-img-top">
+	  <i class="${family} ${prefix + name }" style="color:${colore}"></i>
+	  </div>
+	  <div class="card-body">
+		<div class="card-title text-center">${name}</div>
+	  </div>
+	</div>
+	</div>`;	
 }
+	
+);
+
+// metood con il for classico
+
+// for (let x = 0; x < cards.length; x++) {
+// 	const icona = cards[x];
+
+
+// 	const {family,prefix,name,type} = icona
+// 	const colore = coloreIcone[type]
+
+
+// cardContainer.innerHTML += `
+// <div class="col">
+// <div class="card h-100 shadow-sm">
+//   <div class="card-img-top">
+//   <i class="${family} ${prefix + name }" style="color:${colore}"></i>
+//   </div>
+//   <div class="card-body">
+// 	<div class="card-title text-center">${name}</div>
+//   </div>
+// </div>
+// </div>`;	
+// }
+
+
 }
 
 cardPrint(iconeGriglia)
